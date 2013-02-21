@@ -2,7 +2,8 @@
 using System.Web.Security;
 using System.Web.Services.Description;
 using Purchasing.Core.Domain;
-using UCDArch.Web.Authentication;
+using Purchasing.Web.Services;
+
 
 namespace Purchasing.Web.Controllers
 {
@@ -17,7 +18,7 @@ namespace Purchasing.Web.Controllers
         }
         public ActionResult LogOn(string returnUrl)
         {
-            string resultUrl = CASHelper.Login(); //Do the CAS Login
+            string resultUrl = FakeCASHelper.Login(); //Do the CAS Login
 
             if (resultUrl != null)
             {
@@ -33,7 +34,7 @@ namespace Purchasing.Web.Controllers
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
-            return Redirect("https://cas.ucdavis.edu/cas/logout");
+            return Redirect("https://cas-test.ucdavis.edu/cas/logout");
         }
 
         /// <summary>
@@ -68,5 +69,6 @@ namespace Purchasing.Web.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
     }
 }

@@ -384,6 +384,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RouteConfigurator.asax.cs" />
+    <Compile Include="Services\FakeCASHelper.cs" />
     <Compile Include="Services\IndexSearchService.cs" />
     <Compile Include="Services\IndexService.cs" />
     <Compile Include="Services\ISearchService.cs" />
