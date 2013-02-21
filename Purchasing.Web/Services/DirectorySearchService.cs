@@ -42,7 +42,8 @@ namespace Purchasing.Web.Services
         private static readonly int STR_LDAPPort = 636;
         //private static readonly string STR_LDAPURL = "ldap.ucdavis.edu";
         //private static readonly string STR_LDAPIP = "128.120.32.44"; //specific node per T.Poage //"128.120.32.63";
-        private static readonly string STR_LDAPOLD = "ldap-old.ucdavis.edu"; //via T.Poage: fast-delete setting in the load balancer entry
+        //private static readonly string STR_LDAPOLD = "ldap-old.ucdavis.edu"; //via T.Poage: fast-delete setting in the load balancer entry 
+        private static readonly string STR_LDAPOLD = "ldap-test.ucdavis.edu"; //via T.Poage: fast-delete setting in the load balancer entry 
 
         public static SearchResponse GetSearchResponse(string searchFilter, string searchBase, int sizeLimit = 500)
         {
