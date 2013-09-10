@@ -1061,6 +1061,7 @@
     <Content Include="Views\DepartmentalAdminRequest\Instructions.cshtml" />
     <None Include="Web.AFSTesting.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
