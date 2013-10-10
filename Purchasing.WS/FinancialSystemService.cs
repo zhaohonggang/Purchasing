@@ -54,6 +54,7 @@ namespace Purchasing.WS
                 {
                     doc.vendorHeaderId = order.Vendor.VendorId;
                     doc.vendorDetailId = order.Vendor.VendorAddressTypeCode;
+                    //doc.vendorAddressNumber =;
                 }
 
                 string line1, line2;
@@ -145,7 +146,7 @@ namespace Purchasing.WS
 
                 // try to upload the requisition
                 var client = InitializeClient();
-                var result = client.uploadRequisition(doc, _token);
+                var result = client.uploadRequisition(doc, _token, "01"); //hard coded origin for now
 
                 return new SubmitResult(result);
             }
