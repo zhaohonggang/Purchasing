@@ -146,7 +146,7 @@ namespace Purchasing.WS
 
                 // try to upload the requisition
                 var client = InitializeClient();
-                var result = client.uploadRequisition(doc, _token, "01"); //hard coded origin for now
+                var result = client.uploadRequisition(doc, _token, "PP"); //hard coded origin PP is the one they assigned us.
 
                 return new SubmitResult(result);
             }
